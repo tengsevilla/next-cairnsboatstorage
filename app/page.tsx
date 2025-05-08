@@ -1,103 +1,150 @@
+import ContactMe from "@/components/ContactMe";
+import { DataFacility } from "@/data/Facility";
 import Image from "next/image";
 
-export default function Home() {
+export default function Page() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+    <>
+      <section className="relative h-[500px] w-full">
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage:
+              "url('https://images.unsplash.com/photo-1718052952182-2842ede17d36?q=80&w=2070&auto=format&f[…]0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+          }}
         />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/30" />
+
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-4 h-full flex flex-col items-center justify-center text-center">
+          <h1 className="text-5xl font-semi-bold text-white drop-shadow-lg">
+            The best value boat storage in Cairns
+          </h1>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      {/* Sticky Contact me */}
+      <ContactMe />
+
+      {/* Section */}
+      <section className="py-16 bg-white text-center">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <h2 className="text-3xl md:text-4xl font-light">
+            We offer the <strong className="font-bold">best value boat storage</strong> in Cairns
+          </h2>
+          <p className="text-3xl font-semibold mt-4">
+            Safe, secure and accessible 24/7
+          </p>
+
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-10">
+            {/* Feature 1 */}
+            <div className="flex flex-col items-center space-y-4">
+              <Image
+                src="/icons/boat-storage.png"
+                alt="Boat Storage"
+                width={200}
+                height={200}
+              />
+              <p className="text-xl font-medium">
+                Long & Short Term Secure<br />Boat Storage
+              </p>
+            </div>
+
+            {/* Feature 2 */}
+            <div className="flex flex-col items-center space-y-4">
+              <Image
+                src="/icons/boat-trailer.png"
+                alt="Boat Trailer Parking"
+                width={200}
+                height={200}
+              />
+              <p className="text-xl font-medium">
+                Boat Trailer &<br />Vehicle Parking
+              </p>
+            </div>
+
+            {/* Feature 3 */}
+            <div className="flex flex-col items-center space-y-4">
+              <Image
+                src="/icons/container-storage.jpg"
+                alt="Container Storage"
+                width={200}
+                height={200}
+              />
+              <p className="text-xl font-medium">
+                Industrial & Container<br />Storage
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section */}
+      <section className="relative h-auto bg-fixed bg-center bg-no-repeat bg-cover text-white"
+        style={{
+          backgroundImage:
+            "url('waterpanel-01-scaled.jpg')",
+        }}
+      >
+        <div className="bg-black/50 py-16">
+          <div className="container mx-auto px-4 text-center">
+            <h3 className="text-2xl md:text-3xl font-bold mb-8">
+              Whatever the size of your boat, we can arrange storage for you.
+            </h3>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left max-w-5xl mx-auto text-white">
+              {/* Column 1 */}
+              <ul className="space-y-2 list-disc list-inside">
+                <li>24 hour 7 Days access</li>
+                <li>Main gate just 8 metres from boat ramp</li>
+                <li>Boat ramp usable in all tides</li>
+              </ul>
+
+              {/* Column 2 */}
+              <ul className="space-y-2 list-disc list-inside">
+                <li>Fresh water wash down facilities</li>
+                <li>No height or size restrictions</li>
+                <li>Direct access to reef &amp; islands</li>
+              </ul>
+
+              {/* Column 3 */}
+              <ul className="space-y-2 list-disc list-inside">
+                <li>20 minutes from Cairns CBD</li>
+                <li>24 hour security monitoring</li>
+                <li>Cranes by appointment</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12 text-black">
+            Our Facility
+          </h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            {DataFacility.slice(0, 6).map((item, index) => (
+              <div
+              key={index}
+              className="overflow-hidden rounded shadow hover:shadow-lg transition-shadow duration-300"
+              >
+              <Image
+                src={item.image}
+                alt={`Facility ${index + 1}`}
+                width={1024}
+                height={597}
+                className="w-full h-auto object-cover"
+              />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
