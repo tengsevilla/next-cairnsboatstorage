@@ -36,8 +36,8 @@ export default function Navbar() {
                     <Image
                         src={LogoCompany as unknown as string}
                         alt="Cairns Boat Yard"
-                        width={160}
-                        height={48}
+                        // width={400}
+                        // height={400}
                         className="h-12 w-auto object-contain"
                     />
                 </Link>

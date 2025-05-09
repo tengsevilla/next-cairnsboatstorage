@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
-import LogoCompany from "@/public/logo.png";
+import LogoCompany from "@/public/logo-color.png";
 import { ClientInformation } from "@/data/ClientInformation";
 
 export default function Footer() {
@@ -13,8 +13,6 @@ export default function Footer() {
                 <Image
                     src={LogoCompany as unknown as string}
                     alt="Cairns Boat Yard"
-                    width={160}
-                    height={48}
                     className="h-12 w-auto object-contain"
                 />
                 <Separator className="w-1/3 my-4" />
