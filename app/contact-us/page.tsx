@@ -2,7 +2,7 @@ import ContactMe from "@/components/ContactMe";
 import { ClientInformation } from "@/data/ClientInformation";
 import { Mail, ExternalLink, Phone, MapPin } from "lucide-react";
 import FormContact from "./FormContact";
-
+import Image from "next/image"
 export default function Page() {
     return (
         <>
@@ -46,7 +46,10 @@ export default function Page() {
 
                         {/* Call Us */}
                         <div className="flex-1 px-4 py-6 sm:py-0 flex flex-col items-start text-center sm:text-left">
-                            <Phone className="w-6 h-6 mb-2 text-gray-800" />
+                            <div className="flex items-center mb-2 gap-2">
+                                <Phone className="w-6 h-6 mb-2 text-gray-800" />
+                                <Image src="/icon-whatsapp.png" alt="Whats App" width={30} height={30} />
+                            </div>
                             <h4 className="font-semibold text-gray-900 mb-2">Call Us</h4>
                             <p className="text-gray-600">{ClientInformation.contact}</p>
                             <p className="text-gray-600">{ClientInformation.contact2}</p>

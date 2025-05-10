@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
-import LogoCompany from "@/public/logo.png";
+import LogoCompany from "@/public/logo-color.png";
 import { ClientInformation } from "@/data/ClientInformation";
 
 const navItems = [
@@ -35,9 +35,7 @@ export default function Navbar() {
                 <Link href="/" className="flex-shrink-0">
                     <Image
                         src={LogoCompany as unknown as string}
-                        alt="Cairns Boat Yard"
-                        // width={400}
-                        // height={400}
+                        alt="Cairns Boat Boat Storage"
                         className="h-12 w-auto object-contain"
                     />
                 </Link>
@@ -85,8 +83,8 @@ export default function Navbar() {
                             {item.label}
                         </Link>
                     ))}
-                    <a href="tel:494368354" className="block py-2">
-                        Ph: +61 494 368 354
+                    <a href={`tel:${ClientInformation.contact}`} className="block py-2">
+                        Ph: {ClientInformation.contact}
                     </a>
                 </div>
             )}

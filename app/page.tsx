@@ -39,11 +39,11 @@ export default function Page() {
             Safe, secure and accessible 24/7
           </p>
 
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-4 gap-10">
             {/* Feature 1 */}
             <div className="flex flex-col items-center space-y-4">
               <Image
-                src="/icons/boat-storage.png"
+                src="/icons/boat-storage-removebg-preview.png"
                 alt="Boat Storage"
                 width={200}
                 height={200}
@@ -56,7 +56,7 @@ export default function Page() {
             {/* Feature 2 */}
             <div className="flex flex-col items-center space-y-4">
               <Image
-                src="/icons/boat-trailer.png"
+                src="/icons/boat-trailer-removebg-preview.png"
                 alt="Boat Trailer Parking"
                 width={200}
                 height={200}
@@ -69,13 +69,25 @@ export default function Page() {
             {/* Feature 3 */}
             <div className="flex flex-col items-center space-y-4">
               <Image
-                src="/icons/container-storage.jpg"
+                src="/icons/container-storage-removebg-preview.png"
                 alt="Container Storage"
                 width={200}
                 height={200}
               />
               <p className="text-xl font-medium">
                 Industrial & Container<br />Storage
+              </p>
+            </div>
+            {/* Feature 3 */}
+            <div className="flex flex-col items-center space-y-4">
+              <Image
+                src="/icons/truck-machinery-removebg-preview.png"
+                alt="Container Storage"
+                width={200}
+                height={200}
+              />
+              <p className="text-xl font-medium">
+                Truck and Machinery<br/> Storage
               </p>
             </div>
           </div>
@@ -130,16 +142,16 @@ export default function Page() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {DataFacility.slice(0, 6).map((item, index) => (
               <div
-              key={index}
-              className="overflow-hidden rounded shadow hover:shadow-lg transition-shadow duration-300"
+                key={index}
+                className="overflow-hidden rounded shadow hover:shadow-lg transition-shadow duration-300"
               >
-              <Image
-                src={item.image}
-                alt={`Facility ${index + 1}`}
-                width={1024}
-                height={597}
-                className="w-full h-auto object-cover"
-              />
+                <Image
+                  src={item.image}
+                  alt={`Facility ${index + 1}`}
+                  width={1024}
+                  height={597}
+                  className="w-full h-auto object-cover"
+                />
               </div>
             ))}
           </div>

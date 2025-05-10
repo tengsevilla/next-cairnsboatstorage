@@ -22,6 +22,9 @@ export default function Footer() {
                     <p>
                         Phone: <a href={`tel:${ClientInformation.contact}`} className="hover:underline">{ClientInformation.contact}</a>
                     </p>
+                     <p>
+                        Whats App: <a href={`tel:${ClientInformation.contact2}`} className="hover:underline">{ClientInformation.contact2}</a>
+                    </p>
                     <p>
                         Email: <a href={`mailto:${ClientInformation.email}`} className="hover:underline">
                             {ClientInformation.email}

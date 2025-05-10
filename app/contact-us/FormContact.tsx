@@ -89,7 +89,7 @@ const FormContact = () => {
 
                 <div className="flex flex-col items-start">
                     <Image
-                        src="https://picsum.photos/320/380" // Replace with your image
+                        src="/user.png" // Replace with your image
                         alt="Ben Mumby"
                         width={100}
                         height={100}
