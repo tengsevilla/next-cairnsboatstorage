@@ -32,9 +32,9 @@ export default function Page() {
                         Our Location
                     </h2>
                     <p className="text-lg text-center mb-8 text-gray-700">
-                        A great storage solution for your marine craft, Redbank Boat Storage is conveniently located just 23 kms from Cairns CBD, providing a secure and well equipped facility to store your boat at our secure premises.
+                        A great storage solution for your marine craft, Cairns Boat Storage is conveniently located just 23 kms from Cairns CBD, providing a secure and well equipped facility to store your boat at our secure premises.
 
-                        Redbank’s facilities are perfectly positioned for short or long term boat storage.
+                        Redbank’s road facilities are perfectly positioned for short or long term boat storage.
                     </p>
                 </div>
             </section>

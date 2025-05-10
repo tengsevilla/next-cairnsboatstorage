@@ -49,7 +49,7 @@ export default function Page() {
                 height={200}
               />
               <p className="text-xl font-medium">
-                Long & Short Term Secure<br />Boat Storage
+                Long & Short Term Secure<br />Trailer Boat Storage
               </p>
             </div>
 

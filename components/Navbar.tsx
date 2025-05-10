@@ -85,8 +85,8 @@ export default function Navbar() {
                             {item.label}
                         </Link>
                     ))}
-                    <a href="tel:0415223037" className="block py-2">
-                        Ph: 0415 223 037
+                    <a href="tel:494368354" className="block py-2">
+                        Ph: +61 494 368 354
                     </a>
                 </div>
             )}
