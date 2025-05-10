@@ -1,42 +1,87 @@
-// components/Footer.tsx
 import Link from "next/link";
-import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
-import LogoCompany from "@/public/logo-color.png";
+import { Clock, Phone, Mail, Facebook } from "lucide-react"
 import { ClientInformation } from "@/data/ClientInformation";
 
 export default function Footer() {
     return (
-        <footer className="bg-gray-100 text-gray-700 py-10">
-            <div className="container mx-auto px-4 text-center space-y-6 flex flex-col items-center justify-center">
 
-                <Image
-                    src={LogoCompany as unknown as string}
-                    alt="Cairns Boat Yard"
-                    className="h-12 w-auto object-contain"
-                />
-                <Separator className="w-1/3 my-4" />
+        <footer className="bg-gray-100 text-gray-700 py-10 border-t border-border">
+            <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
 
-                <div className="space-y-1 text-sm text-center">
-                    <p>{ClientInformation.address}</p>
-                    <p>
-                        Phone: <a href={`tel:${ClientInformation.contact}`} className="hover:underline">{ClientInformation.contact}</a>
-                    </p>
-                     <p>
-                        Whats App: <a href={`tel:${ClientInformation.contact2}`} className="hover:underline">{ClientInformation.contact2}</a>
-                    </p>
-                    <p>
-                        Email: <a href={`mailto:${ClientInformation.email}`} className="hover:underline">
-                            {ClientInformation.email}
-                        </a>
-                    </p>
+                {/* Left - Useful Links */}
+                <div>
+                    <h3 className="text-xl font-bold mb-4">Useful Links</h3>
+                    <ul className="space-y-2">
+                        <li>
+                            <Link href="#" className="hover:text-primary">
+                                License Agreement
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="#" className="hover:text-primary">
+                                Terms & Conditions
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="#" className="hover:text-primary">
+                                Privacy Policy
+                            </Link>
+                        </li>
+                    </ul>
                 </div>
 
-                <div className="text-xs text-gray-500 text-center">
-                    <Link href="/privacy-policy" className="hover:underline">Privacy Policy</Link>
-                    {" | "}
-                    <Link href="/terms-and-conditions" className="hover:underline">T &amp; C</Link>
+                {/* Middle - Operations */}
+                <div>
+                    <h3 className="text-xl font-bold mb-4">Operations</h3>
+                    <ul className="space-y-3">
+                        <li className="flex items-center space-x-2 mb-2">
+                            <Clock className="w-5 h-5 text-black mr-2" />
+                            <span>Monday - Friday: 7:00 AM - 5:00 PM</span>
+                        </li>
+                        <li className="flex items-center space-x-2">
+                            <Clock className="w-5 h-5 text-black mr-2" />
+                            <span>Saturday - Sunday: 8:00 AM - 12:00 PM</span>
+                        </li>
+                    </ul>
                 </div>
+
+                {/* Right - Contact Information */}
+                <div>
+                    <h3 className="text-xl font-bold mb-4">Connect</h3>
+                    <ul className="space-y-3 gap-4">
+                        <li className="flex items-center space-x-2 mb-2">
+                            <Phone className="w-5 h-5 text-black mr-2" />
+                            <a href={`tel:${ClientInformation.contact}`} className="hover:text-primary">
+                                {ClientInformation.contact}
+                            </a>
+                        </li>
+                        <li className="flex items-center space-x-2 mb-2">
+                            <Image src="/icon-whatsapp.png" alt="Whats App" width={24} height={24} className="mr-2" />
+                            <a href={`tel:${ClientInformation.contact}`} className="hover:text-primary">
+                                {ClientInformation.contact}
+                            </a>
+                        </li>
+                        <li className="flex items-center space-x-2 mb-2">
+                            <Mail className="w-5 h-5 text-black mr-2" />
+                            <a href={`mailto:${ClientInformation.email}`} className="hover:text-primary">
+                                {ClientInformation.email}
+                            </a>
+                        </li>
+                    </ul>
+                    {/* Social Media Links */}
+                    <div className="flex space-x-4 mt-4">
+                        <Link href={ClientInformation.facebook} className="hover:text-primary">
+                            <Facebook className="w-6 h-6" />
+                        </Link>
+                    </div>
+                </div>
+
+            </div>
+
+            {/* Copyright */}
+            <div className="text-center text-sm mt-8 border-t border-border pt-4">
+                &copy; {new Date().getFullYear()} Cairns Boat Storage. All rights reserved.
             </div>
         </footer>
     );
