@@ -48,39 +48,6 @@ export default function FormClientRegistration() {
                 SCHEDULE OF CLIENT/PROPERTY DETAILS (“Schedule”)
             </h2>
 
-            <div className="space-y-4">
-                {["Date", "Name", "E-mail Address", "Residential Address", "Postal Address", "Contact Number", "Driver Licence Number", "Boat/Car Rego", "Trailer Rego", "Boat Name", "Monthly/Annual Storage Fee"].map((label, index) => {
-                    const name = schema.keyof().options[index] as keyof FormData;
-                    const type = name === "date" ? "date" : "text";
-                    return (
-                        <div key={name} className="flex items-center gap-4 mb-2">
-                            <label className="w-64 text-sm font-medium whitespace-nowrap">{label}</label>
-                            <div className="flex-1">
-                                <input
-                                    type={type}
-                                    {...register(name)}
-                                    className="w-full border border-gray-400 h-10 px-3 rounded"
-                                />
-                                {errors[name] && (
-                                    <p className="text-red-500 text-sm mt-1">
-                                        {errors[name]?.message as string}
-                                    </p>
-                                )}
-                            </div>
-                        </div>
-                    );
-                })}
-            </div>
-
-            <div className="flex gap-4 items-start">
-                <label className="w-64 text-sm font-medium mt-2">Notes</label>
-                <textarea
-                    rows={4}
-                    {...register("notes")}
-                    className="flex-1 border border-gray-400 px-3 py-2 rounded"
-                ></textarea>
-            </div>
-
             <div className="text-sm leading-relaxed bg-gray-100 p-4 rounded mt-4">
                 <p className="mb-1">Dear Client,</p>
                 <p className="mb-2">
@@ -215,27 +182,28 @@ export default function FormClientRegistration() {
 
 
                     <div className="my-2">
-                        <div className="flex items-center gap-4 mb-2">
-                            <label className="w-64 text-sm font-medium whitespace-nowrap">Name</label>
-                            <div className="flex-1">
-                                <input
-                                    type="text"
-                                    className="w-full border border-gray-400 h-10 px-3 rounded"
-                                    value={watch("name") || ""}
-                                    readOnly
-                                />
-                            </div>
-                        </div>
-                        <div className="flex items-center gap-4 mb-2">
-                            <label className="w-64 text-sm font-medium whitespace-nowrap">Date</label>
-                            <div className="flex-1">
-                                <input
-                                    type="text"
-                                    className="w-full border border-gray-400 h-10 px-3 rounded"
-                                    value={watch("date") || ""}
-                                    readOnly
-                                />
-                            </div>
+                        <div className="space-y-4">
+                            {["Date", "Name"].map((label, index) => {
+                                const name = schema.keyof().options[index] as keyof FormData;
+                                const type = name === "date" ? "date" : "text";
+                                return (
+                                    <div key={name} className="flex items-center gap-4 mb-2">
+                                        <label className="w-64 text-sm font-medium whitespace-nowrap">{label}</label>
+                                        <div className="flex-1">
+                                            <input
+                                                type={type}
+                                                {...register(name)}
+                                                className="w-full border border-gray-400 h-10 px-3 rounded"
+                                            />
+                                            {errors[name] && (
+                                                <p className="text-red-500 text-sm mt-1">
+                                                    {errors[name]?.message as string}
+                                                </p>
+                                            )}
+                                        </div>
+                                    </div>
+                                );
+                            })}
                         </div>
                     </div>
                 </div>

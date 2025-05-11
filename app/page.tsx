@@ -117,7 +117,7 @@ export default function Page() {
 
               {/* Column 2 */}
               <ul className="space-y-2 list-disc list-inside">
-                <li>Fresh water wash down facilities</li>
+                <li>Fresh water wash down boat on trailer</li>
                 <li>No height or size restrictions</li>
                 <li>Direct access to reef &amp; islands</li>
               </ul>
