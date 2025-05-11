@@ -104,7 +104,7 @@ export default function Page() {
         <div className="bg-black/50 py-16">
           <div className="container mx-auto px-4 text-center">
             <h3 className="text-2xl md:text-3xl font-bold mb-8">
-              Whatever the size of your boat, we can arrange storage for you.
+              Whatever the size of your boat on trailer, we can arrange storage for you.
             </h3>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left max-w-5xl mx-auto text-white">
@@ -117,7 +117,7 @@ export default function Page() {
 
               {/* Column 2 */}
               <ul className="space-y-2 list-disc list-inside">
-                <li>Fresh water wash down boat on trailer</li>
+                <li>Fresh water wash down</li>
                 <li>No height or size restrictions</li>
                 <li>Direct access to reef &amp; islands</li>
               </ul>
