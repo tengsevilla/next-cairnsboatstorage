@@ -11,24 +11,8 @@ export default function Footer() {
 
                 {/* Left - Useful Links */}
                 <div>
-                    <h3 className="text-xl font-bold mb-4">Useful Links</h3>
-                    <ul className="space-y-2">
-                        <li>
-                            <Link href="#" className="hover:text-primary">
-                                License Agreement
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="#" className="hover:text-primary">
-                                Terms & Conditions
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="#" className="hover:text-primary">
-                                Privacy Policy
-                            </Link>
-                        </li>
-                    </ul>
+                    <h3 className="text-xl font-bold mb-4">Location</h3>
+                    <p>459R Redbank Road, Packers Camp, QLD 4865</p>
                 </div>
 
                 {/* Middle - Operations */}
