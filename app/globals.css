@@ -70,28 +70,29 @@ body {
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325); */
 
-  --primary: oklch(0.46 0.17 249.1);
-  /* deep blue */
+  /* --primary: oklch(0.46 0.17 249.1); */
+  --primary: #9b2837;
+  /* deep crimson */
   --primary-foreground: oklch(0.985 0 0);
   /* white */
 
-  --secondary: oklch(0.89 0.03 212.8);
-  /* soft aqua */
-  --secondary-foreground: oklch(0.205 0 0);
-  /* dark gray text */
+  --secondary: oklch(0.82 0.12 250);
+  /* soft indigo-blue, complements crimson */
+  --secondary-foreground: oklch(0.2 0 0);
+  /* dark text */
 
-  --accent: oklch(0.45 0.18 141.5);
-  /* forest green */
+  --accent: oklch(0.6 0.2 140);
+  /* olive green, contrasting accent */
   --accent-foreground: oklch(0.985 0 0);
   /* white */
 
-  --muted: oklch(0.89 0.03 212.8);
-  /* match secondary */
-  --muted-foreground: oklch(0.45 0 0);
-  /* darker gray text */
+  --muted: oklch(0.87 0.04 20);
+  /* soft beige, subtle background */
+  --muted-foreground: oklch(0.35 0 0);
+  /* medium gray text */
 
   --destructive: oklch(0.577 0.245 27.325);
-  /* keep original warning color */
+  /* warning red-orange */
 
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
@@ -109,10 +110,6 @@ body {
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-
-  --color-primary-dark: hsl(204, 91%, 20%);
-  --color-secondary-dark: hsl(186, 24%, 60%);
-  --color-accent-dark: hsl(126, 89%, 20%);
 
 }
 

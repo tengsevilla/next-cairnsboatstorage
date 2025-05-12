@@ -43,7 +43,7 @@ export default function Page() {
             {/* Feature 1 */}
             <div className="flex flex-col items-center space-y-4">
               <Image
-                src="/icons/boat-storage-removebg-preview.png"
+                src="/icons/boat-storage.png"
                 alt="Boat Storage"
                 width={200}
                 height={200}
@@ -56,7 +56,7 @@ export default function Page() {
             {/* Feature 2 */}
             <div className="flex flex-col items-center space-y-4">
               <Image
-                src="/icons/boat-trailer-removebg-preview.png"
+                src="/icons/boat-trailer.png"
                 alt="Boat Trailer Parking"
                 width={200}
                 height={200}
@@ -69,7 +69,7 @@ export default function Page() {
             {/* Feature 3 */}
             <div className="flex flex-col items-center space-y-4">
               <Image
-                src="/icons/container-storage-removebg-preview.png"
+                src="/icons/container-storage.png"
                 alt="Container Storage"
                 width={200}
                 height={200}
@@ -81,7 +81,7 @@ export default function Page() {
             {/* Feature 3 */}
             <div className="flex flex-col items-center space-y-4">
               <Image
-                src="/icons/truck-machinery-removebg-preview.png"
+                src="/icons/truck-machinery.png"
                 alt="Container Storage"
                 width={200}
                 height={200}
@@ -98,7 +98,7 @@ export default function Page() {
       <section className="relative h-auto bg-fixed bg-center bg-no-repeat bg-cover text-white"
         style={{
           backgroundImage:
-            "url('waterpanel-01-scaled.jpg')",
+            "url('water-panel.png')",
         }}
       >
         <div className="bg-black/50 py-16">
