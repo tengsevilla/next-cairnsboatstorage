@@ -11,7 +11,7 @@ export default function Page() {
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
                         backgroundImage:
-                            "url('https://images.unsplash.com/photo-1680906001201-bcbb6bc9cb62?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+                            "url(' facility-2/4.jpg')",
                     }}
                 />
 
