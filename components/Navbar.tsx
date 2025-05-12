@@ -12,7 +12,7 @@ const navItems = [
     { label: "Home", href: "/" },
     { label: "Facilities", href: "/facilities" },
     { label: "Location", href: "/location" },
-    // { label: "Terms and Conditions", href: "/client-registration" },
+    { label: "Terms and Conditions", href: "/terms-and-condition" },
     { label: "Contact Us", href: "/contact-us" },
 ];
 
