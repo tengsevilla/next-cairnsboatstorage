@@ -42,7 +42,7 @@ export default function Page() {
             <section className="relative h-auto bg-fixed bg-center bg-no-repeat bg-cover text-white"
                 style={{
                     backgroundImage:
-                        "url('waterpanel-01-scaled.jpg')",
+                        "url('water-panel.png')",
                 }}
             >
                 <div className="bg-black/50 py-16">
