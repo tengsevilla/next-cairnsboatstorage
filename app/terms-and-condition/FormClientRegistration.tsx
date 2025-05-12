@@ -43,12 +43,8 @@ export default function FormClientRegistration() {
             onSubmit={handleSubmit(onSubmit)}
             className="max-w-4xl mx-auto bg-white text-black p-10 border border-gray-300 shadow space-y-6 my-8"
         >
-            <h2 className="text-xl font-bold text-center mb-6">
-                SCHEDULE OF CLIENT/PROPERTY DETAILS (“Schedule”)
-            </h2>
-
             <div className="text-sm leading-relaxed bg-gray-100 p-4 rounded mt-4">
-                <p className="mb-1">Dear Client,</p>
+                <p className="mb-1">Dear Valued Customers,</p>
                 <p className="mb-2">
                     Please note that liability for any loss whatsoever,
                     remains with the owner of the boat, car or other item identified and
@@ -133,7 +129,7 @@ export default function FormClientRegistration() {
                             8.2. Intoxicated persons are not permitted within the facility;
                         </p>
                         <p className="ml-6 mb-2">
-                            8.3. Disposal of oils/greases, fuel and rubbish is the responsibility of the Customer and is not to be left in the compound. All spills must be thoroughly cleaned up immediately; and
+                            8.3. Disposal of oils/greases, fuel and rubbish is the responsibility of the Customer and is not to be left in the compound. All spills must be thoroughly cleaned up immediately; and must be reported to Cairns Boat Storage
                         </p>
                         <p className="ml-6 mb-2">
                             8.4. They are aware that the Privacy Act 2000 may prevent Cairns Boat Storage from disclosing personal information about them without the Customer’s approval and authorise Cairns Boat Storage to provide personal details to persons who it considers, in its absolute discretion, to have a claim against the Customer.
