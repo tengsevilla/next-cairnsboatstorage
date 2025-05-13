@@ -71,7 +71,8 @@ body {
   --destructive: oklch(0.577 0.245 27.325); */
 
   /* --primary: oklch(0.46 0.17 249.1); */
-  --primary: #9b2837;
+  /* --primary: #9b2837; */
+  --primary: #e05a6f;
   /* deep crimson */
   --primary-foreground: oklch(0.985 0 0);
   /* white */
