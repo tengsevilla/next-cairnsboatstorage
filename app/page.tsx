@@ -20,8 +20,7 @@ export default function Page() {
 
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 h-full flex flex-col items-center justify-center text-center">
-          <h1 className="text-5xl font-semi-bold text-white drop-shadow-lg">
-            The best value boat storage in Cairns
+          <h1 className="text-5xl font-semi-bold text-white drop-shadow-lg">           
             Best value boat storage in Cairns
           </h1>
         </div>

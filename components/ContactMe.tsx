@@ -19,8 +19,7 @@ export default function ContactMe() {
 
                 {/* Content */}
                 <div className="relative z-10 container mx-auto px-4 py-6 flex flex-col lg:flex-row items-center justify-center gap-4 md:gap-16 text-center lg:text-left">
-                    <h3 className="text-2xl font-semibold">
-                        Cairns Boat Storage Specialists
+                    <h3 className="text-2xl font-semibold">    
                         Cairns Storage Specialists
                     </h3>
                     <Link
