@@ -60,7 +60,7 @@ export default function FormClientRegistration() {
                 <div className="text-sm">
                     <p className="mb-2"><strong>GENERAL</strong></p>
                     <p className="mb-2">
-                        1. I, the Customer, declare that I am the owner of the boat, car or other item identified in the Schedule OR I am authorised by the owner of this item on the application form to enter into this storage arrangement.
+                        1. I, declare that I am the owner of the boat, car or other item identified in the Schedule OR I am authorised by the owner of this item on the application form to enter into this storage arrangement.
                     </p>
                     <p className="mb-2">
                         2. The facility is to be used solely for the storage of the item(s) listed in the Schedule and not for any other item, thing or any activity or purpose.

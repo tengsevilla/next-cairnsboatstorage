@@ -51,11 +51,7 @@ export default function Navbar() {
                     ))}
                 </ul>
 
-                {/* Contact */}
-                <div className="hidden lg:block text-sm font-semibold">
-                    <a href={`tel:${ClientInformation.contact}`} className="hover:underline">Ph     {ClientInformation.contact}</a>
-
-                </div>
+               
 
                 {/* Mobile menu toggle */}
                 <div className="lg:hidden">
