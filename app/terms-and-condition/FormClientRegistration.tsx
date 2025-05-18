@@ -1,62 +1,26 @@
-"use client";
-
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { toast } from "react-hot-toast";
-
-const schema = z.object({
-  date: z.string().min(1, "Required"),
-  name: z.string().min(1, "Required"),
-  email: z.string().email("Invalid email").min(1, "Required"),
-  residentialAddress: z.string().min(1, "Required"),
-  postalAddress: z.string().min(1, "Required"),
-  contactNumber: z.string().min(1, "Required"),
-  driverLicence: z.string().min(1, "Required"),
-  boatRego: z.string(),
-  trailerRego: z.string(),
-  boatName: z.string(),
-  storageFee: z.string(),
-  notes: z.string().optional(),
-});
-
-type FormData = z.infer<typeof schema>;
-
 export default function FormClientRegistration() {
-  const { handleSubmit } = useForm<FormData>({
-    resolver: zodResolver(schema),
-  });
+    return (
+        <div
+            className="max-w-4xl mx-auto bg-white text-black p-10 border border-gray-300 shadow space-y-6 my-8"
+        >
+            <div className="text-sm leading-relaxed bg-gray-100 p-4 rounded mt-4">
+                <p className="mb-1">Dear Valued Customers,</p>
+                <p className="mb-2">
+                    Please note that liability for any loss whatsoever, remains with the owner of the boat, car or other item identified and their individual insurance company.
+                </p>
+                <p className="mb-2">
+                    Accordingly, Cairns Boat Storage is indemnified at all times and in all circumstances against loss from, or claims by the undersigned, Customers, their agents or underwriters.
+                </p>
+                <p className="mb-2">
+                    Please read the terms and conditions below before signing.
+                </p>
+                <p>
+                    I acknowledge and agree to be bound by the following terms and conditions in relation to storage of my boat, car or other item at Cairns Boat Storage facility.
+                </p>
 
-  const onSubmit = (data: FormData) => {
-    console.log(data);
-    toast.error(
-      "Form submit is not working, please send us an email for now since we are still working on this."
-    );
-  };
-
-  return (
-    <form
-      onSubmit={handleSubmit(onSubmit)}
-      className="max-w-4xl mx-auto bg-white text-black p-10 border border-gray-300 shadow space-y-6 my-8"
-    >
-      <div className="text-sm leading-relaxed bg-gray-100 p-4 rounded mt-4">
-        <p className="mb-1">Dear Valued Customers,</p>
-        <p className="mb-2">
-          Please note that liability for any loss whatsoever, remains with the owner of the boat, car or other item identified and their individual insurance company.
-        </p>
-        <p className="mb-2">
-          Accordingly, Cairns Boat Storage is indemnified at all times and in all circumstances against loss from, or claims by the undersigned, Customers, their agents or underwriters.
-        </p>
-        <p className="mb-2">
-          Please read the terms and conditions below before signing.
-        </p>
-        <p>
-          I acknowledge and agree to be bound by the following terms and conditions in relation to storage of my boat, car or other item at Cairns Boat Storage facility.
-        </p>
-
-        <h2 className="text-lg font-bold text-center my-6">
-          TERMS AND CONDITIONS
-        </h2>
+                <h2 className="text-lg font-bold text-center my-6">
+                    TERMS AND CONDITIONS
+                </h2>
                 <div className="text-sm">
                     <p className="mb-2"><strong>GENERAL</strong></p>
                     <p className="mb-2">
@@ -121,6 +85,6 @@ export default function FormClientRegistration() {
                     <p className="mb-2">16. The Customer’s liability for outstanding fees, property damage, personal injury and environmental damage under this Agreement continues beyond the termination of this Agreement.</p>
                 </div>
             </div>
-        </form>
+        </div>
     );
 }

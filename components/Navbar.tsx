@@ -41,7 +41,7 @@ export default function Navbar() {
                 </Link>
 
                 {/* Desktop Nav */}
-                <ul className="hidden lg:flex flex-1 justify-center gap-8 items-center text-sm font-semibold uppercase tracking-wide">
+                <ul className="hidden lg:flex flex-1 justify-center gap-8 items-center text-sm font-semibold uppercase tracking-wide ml-[-156px]">
                     {navItems.map((item) => (
                         <li key={item.href}>
                             <Link href={item.href} className="hover:underline">
@@ -51,7 +51,7 @@ export default function Navbar() {
                     ))}
                 </ul>
 
-               
+
 
                 {/* Mobile menu toggle */}
                 <div className="lg:hidden">
