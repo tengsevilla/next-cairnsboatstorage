@@ -7,6 +7,7 @@ import { useState } from "react";
 import { toast } from "react-hot-toast";;
 import emailjs from "emailjs-com";
 import { Button } from "@/components/ui/button";
+import { ClientInformation } from "@/data/ClientInformation";
 
 // Define your schema using Zod
 const FormSchema = z.object({
@@ -56,6 +57,8 @@ const FormContact = () => {
                 {
                     email: formData.email,                      // 👈 the email of the person you are sending to
                     user_name: formData.name,
+                    company: "Cairns Boat Storage",
+                    reply_to: ClientInformation.email,
                 },
                 process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_USER_ID ?? ''        // Replace with your EmailJS public user ID
             );
@@ -68,6 +71,8 @@ const FormContact = () => {
                     email: formData.email,
                     phone: formData.phone,
                     message: formData.message,
+                    company: "Cairns Boat Storage",
+                    to_email: ClientInformation.email,
                 },
                 process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_USER_ID ?? ''        // Replace with your EmailJS public user ID
             );
