@@ -59,6 +59,8 @@ const FormContact = () => {
                     user_name: formData.name,
                     company: "Cairns Boat Storage",
                     reply_to: ClientInformation.email,
+                    logo_url: "https://www.cairnsboatstorage.com.au/logo.jpg",
+                    address: ClientInformation.address,
                 },
                 process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_USER_ID ?? ''        // Replace with your EmailJS public user ID
             );
@@ -73,6 +75,8 @@ const FormContact = () => {
                     message: formData.message,
                     company: "Cairns Boat Storage",
                     to_email: ClientInformation.email,
+                    logo_url: "https://www.cairnsboatstorage.com.au/logo.jpg",
+                    address: ClientInformation.address,
                 },
                 process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_USER_ID ?? ''        // Replace with your EmailJS public user ID
             );
