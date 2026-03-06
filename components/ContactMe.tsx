@@ -19,14 +19,18 @@ export default function ContactMe() {
 
                 {/* Content */}
                 <div className="relative z-10 container mx-auto px-4 py-6 flex flex-col lg:flex-row items-center justify-center gap-4 md:gap-16 text-center lg:text-left">
-                    <h3 className="text-2xl font-semibold">    
+                    <h3 className="text-2xl font-semibold">
                         Cairns Storage Specialists
                     </h3>
                     <Link
                         href={`tel:${ClientInformation.contact}`}
-                        className="inline-block bg-primary text-white font-bold py-2 px-4 rounded shadow hover:bg-primary/50 transition"
+                        className="group flex items-center gap-2.5 bg-white text-gray-900 hover:bg-primary hover:text-white font-bold py-2.5 px-7 rounded-full shadow-lg transition-all duration-300 active:scale-95"
                     >
-                        Call {ClientInformation.contact}
+                        <div className="relative flex h-2.5 w-2.5">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75 group-hover:bg-white"></span>
+                            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary group-hover:bg-white transition-colors"></span>
+                        </div>
+                        <span className="text-base">Call {ClientInformation.contact}</span>
                     </Link>
                 </div>
             </section>
