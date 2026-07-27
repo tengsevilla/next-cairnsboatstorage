@@ -3,27 +3,29 @@ import { Gantari } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Toaster } from "react-hot-toast";
-
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
+import JsonLd from "@/components/JsonLd";
+import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 const gantari = Gantari({
   variable: "--font-gantari",
   subsets: ["latin"],
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
+const description =
+  "Cairns Boat Storage offers the best value in secure, long and short-term boat, trailer, truck, and container storage. 24/7 access, no size limits, near the boat ramp.";
+
+const ogDescription =
+  "Affordable and secure boat, trailer, and container storage near Cairns boat ramp with 24/7 access and no size restrictions.";
+
 export const metadata: Metadata = {
-  title: "Cairns Boat Storage | Secure 24/7 Boat & Trailer Parking",
-  description:
-    "Cairns Boat Storage offers the best value in secure, long and short-term boat, trailer, truck, and container storage. 24/7 access, no size limits, near the boat ramp.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Cairns Boat Storage | Secure 24/7 Boat & Trailer Parking",
+    template: `%s | ${SITE_NAME}`,
+  },
+  description,
   keywords: [
     "Cairns boat storage",
     "secure boat storage",
@@ -35,22 +37,47 @@ export const metadata: Metadata = {
     "Cairns boat ramp storage",
     "industrial storage Cairns"
   ],
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  formatDetection: {
+    telephone: true,
+    address: true,
+    email: true,
+  },
   openGraph: {
     title: "Cairns Boat Storage | 24/7 Secure Parking",
-    description:
-      "Affordable and secure boat, trailer, and container storage near Cairns boat ramp with 24/7 access and no size restrictions.",
-    url: "https://www.cairnsboatyard.com.au",
-    siteName: "Cairns Boat Storage",
+    description: ogDescription,
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    locale: "en_AU",
     images: [
       {
-        url: "https://www.cairnsboatyard.com.au/og-image.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Cairns Boat Storage - Safe and Accessible 24/7"
       }
     ],
     type: "website"
-  }
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cairns Boat Storage | 24/7 Secure Parking",
+    description: ogDescription,
+    images: ["/og-image.png"],
+  },
 };
 
 
@@ -60,13 +87,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en-AU">
 
       <body className={`${gantari.variable} antialiased min-h-screen flex flex-col`}>
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:font-semibold focus:text-gray-900 focus:shadow-lg focus:outline-2 focus:outline-offset-2 focus:outline-primary"
+        >
+          Skip to main content
+        </a>
         <Navbar />
-        <main className="flex-1">{children}</main>
+        <main id="main" className="flex-1">{children}</main>
         <Footer />
-        <Toaster position="top-center" />
+        <JsonLd />
       </body>
     </html>
   );
